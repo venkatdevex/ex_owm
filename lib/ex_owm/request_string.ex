@@ -24,7 +24,7 @@ defmodule ExOwm.RequestString do
 
   # One call weather call.
   defp add_prefix_substring({:get_weather, location, opts}),
-    do: {"api.openweathermap.org/data/2.5/onecall", location, opts}
+    do: {"api.openweathermap.org/data/3.0/onecall", location, opts}
 
   # Current weather call.
   defp add_prefix_substring({:get_current_weather, location, opts}),
@@ -44,7 +44,7 @@ defmodule ExOwm.RequestString do
 
   # History call.
   defp add_prefix_substring({:get_historical_weather, location, opts}),
-    do: {"api.openweathermap.org/data/2.5/onecall/timemachine", location, opts}
+    do: {"api.openweathermap.org/data/3.0/onecall/timemachine", location, opts}
 
   # Call by city name and ISO 3166 country code.
   defp add_location_substring({string, %{city: city, country_code: country_code}, opts}),
